@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibra</title>
+    <link href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #mapContainer {
+                height: 60vh;
+                width: 80%;
+                margin: auto;
+        }
+        .leaflet-routing-container-hide {
+                display: none !important;
+        }
+    </style>
+</head>
+<body class="dark bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-white">Fibra</h1>
+        <nav class="mx-auto">
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Inicio</a></li>
+                <li><a href="fibra.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Fibra</a></li>
+                <li><a href="despliegue.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Despliegue</a></li>
+                <li><a href="equipos.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Equipos</a></li>
+                <li><a href="presupuesto.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Presupuesto</a></li>
+            </ul>
+        </nav>
+        <img src="/img/francia.png" alt="Logo" class="ml-2 w-6 h-6">
+    </header>
+    <main class="p-4 bg-gray-800 rounded-lg shadow-lg lg:h-1/2 overflow-auto mt-4 mx-auto w-full lg:w-4/5">
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">Despliegue de fibra</h2>
+            <p>En un entorno digital en constante evolución, la demanda de ancho de banda y la necesidad de una conectividad robusta están en aumento...</p>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">Implementación de la fibra óptica en Colombia</h2>
+            <p>El crecimiento de la fibra óptica en Colombia tiene un impacto positivo en el desarrollo económico y social del país...</p>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">Nuestros objetivos</h2>
+            <ul class="list-disc list-inside">
+                <li class="text-green-500">Presentar la Visión Estratégica</li>
+                <li class="text-yellow-500">Desglose del Presupuesto</li>
+                <li class="text-yellow-300">Mapeo de la Red</li>
+            </ul>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">El despliegue de fibra óptica se realizará en dos fases:</h2>
+            <h3 class="font-semibold">Fase 1:</h3>
+            <p>Se realizará un estudio de las rutas óptimas para la instalación de la fibra óptica...</p>
+            <h3 class="font-semibold">Fase 2:</h3>
+            <p>Se instalará la fibra óptica en las rutas definidas...</p>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">¿Qué es una fibra GPON?</h2>
+            <p>Las redes GPON están compuestas por diferentes equipos para llevar la conexión a la red y a Internet por la fibra óptica...</p>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <h2 class="font-bold text-2xl mb-4">Limitantes de distancia</h2>
+            <ul class="list-disc list-inside">
+                <li class="text-red-500">Alcance lógico máximo: 60 km</li>
+                <li class="text-green-500">Distancia máxima de fibra recepción (S / R) y de recepción / envío (R / S): 20 km</li>
+                <li class="text-yellow-500">Tasa: 1.24416 Gbps de subida, 2.48832 Gbps de descarga</li>
+            </ul>
+    </main>
+<footer class="bg-gray-800 p-6 mt-4 text-white">
+    <div class="flex justify-between items-center">
+        <p class="text-sm mb-2">© 2024 Hecho en USTA</p>
+        <div class="flex items-center space-x-4">
+            <h2 class="text-lg font-semibold mr-4">Desarrollado por Dylan Tamayo</h2>
+            <a href="#" class="hover:text-blue-500 transition duration-200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="h-8">
+            </a>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

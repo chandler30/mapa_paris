@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de París</title>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #mapContainer {
+        height: 60vh;
+        width: 80%;
+        margin: auto;
+    }
+    .leaflet-routing-container-hide {
+        display: none !important;
+    }
+  </style>
+</head>
+<body class="dark bg-gray-900 text-white">
+  <header class="bg-gray-800 p-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-white">Mapa de París</h1>
+    <nav class="mx-auto">
+      <ul class="flex space-x-4">
+          <li><a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Inicio</a></li>
+          <li><a href="fibra.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Fibra</a></li>
+          <li><a href="despliegue.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Despliegue</a></li>
+          <li><a href="equipos.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Equipos</a></li>
+          <li><a href="presupuesto.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Presupuesto</a></li>
+      </ul>
+  </nav>
+    <img src="/img/francia.png" alt="Logo" class="ml-2 w-6 h-6">
+  </header>
+  <main class="p-4 bg-gray-800 rounded-lg shadow-lg lg:h-1/2 overflow-auto mt-4 mx-auto w-full lg:w-4/5">
+
+    </div>
+    <div id="mapContainer" class="w-full h-full rounded-lg shadow-lg overflow-hidden"></div>
+  </main>
+<footer class="bg-gray-800 p-6 mt-4 text-white">
+  <div class="flex justify-between items-center">
+    <p class="text-sm mb-2">© 2024 Hecho en USTA</p>
+    <div class="flex items-center space-x-4">
+      <h2 class="text-lg font-semibold mr-4">Desarrollado por Dylan Tamayo</h2>
+      <a href="#" class="hover:text-blue-500 transition duration-200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="h-8">
+      </a>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

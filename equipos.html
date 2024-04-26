@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="dark bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-white">Equipos</h1>
+        <nav class="mx-auto">
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Inicio</a></li>
+                <li><a href="fibra.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Fibra</a></li>
+                <li><a href="despliegue.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Despliegue</a></li>
+                <li><a href="equipos.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Equipos</a></li>
+                <li><a href="presupuesto.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Presupuesto</a></li>
+            </ul>
+        </nav>
+        <img src="/img/francia.png" alt="Logo" class="ml-2 w-6 h-6">
+    </header>
+    <main class="p-4 bg-gray-800 rounded-lg shadow-lg lg:h-1/2 overflow-auto mt-4 mx-auto w-full lg:w-4/5">
+        <div class="text-lg text-center mb-8">
+            <p>Componentes necesarios</p>
+            <p class="text-justify">El proyecto incluye el despliegue de fibra óptica desde el nodo central hasta sitios centrales. La red se dividirá en celdas para facilitar la gestión y el mantenimiento.</p>
+        </div>
+        <div class="text-lg text-center mb-8">
+                <p>Equipos necesarios:</p>
+                <ul class="list-none">
+                        <li>🔴 Nodo central de fibra óptica</li>
+                        <li>🟢 Splitters de fibra óptica</li>
+                        <li>🟡 Cables de fibra óptica</li>
+                        <li>🟣 Herramientas de instalación</li>
+                </ul>
+        </div>
+        <div class="text-lg text-center mb-8">
+            <p class="text-2xl font-bold mb-4">Nodo central de fibra óptica</p>
+            <p class="text-justify mb-4">Es un dispositivo que sirve como punto de conexión para la red de fibra óptica. El nodo central del proyecto admitirá hasta 16 puertos de entrada y salida, lo que permitirá conectar hasta 16 splitters de fibra óptica
+                En el caso específico del proyecto de despliegue de fibra óptica para los siguientes sitios: Torre Eiffel, Louvre, Catedral de Notre-Dame,Basílica del Sagrado Corazón,Arco de Triunfo,Jardines de Luxemburgo y Moulin Rouge. Se recomienda utilizar una OLT con 8 puertos. Esta cantidad de puertos será suficiente para conectar los 4 splitters de fibra óptica y contar con un número de puertos de reserva para esto se utlizara una OLT GPON DeltaStream de 8 puertos PON .</p>
+            <figure>
+                <img src="/img/Nodo-central.jpg" alt="GPON Optical Line Terminal" class="w-1/2 mx-auto object-cover rounded-lg shadow-md">
+                <figcaption class="text-center mt-4">GPON Optical Line Terminal</figcaption>
+            </figure>
+        </div>
+
+        <div class="text-lg text-center mb-8">
+            <p class="text-2xl font-bold mb-4">Divisor óptico 1x16</p>
+            <p class="text-2xly mb-4">El ODF es un dispositivo que organiza y conecta los cables de fibra óptica.</p>
+            <figure>
+                <img src="/img/divisor.png" alt="Divisor óptico 1x16" class="w-1/2 mx-auto object-cover rounded-lg shadow-md">
+                <figcaption class="text-center mt-4">Divisor óptico 1x16</figcaption>
+            </figure>
+        </div>
+
+        <div class="text-lg text-center mb-8">
+            <p class="text-2xl font-bold mb-4">ODF</p>
+            <p class="text-2xly mb-4">El ODF es un dispositivo que organiza y conecta los cables de fibra óptica.</p>
+            <figure>
+                <img src="/img/odf.jpg" alt="ODF de 48 puertos" class="w-1/2 mx-auto object-cover rounded-lg shadow-md">
+                <figcaption class="text-center mt-4">ODF de 48 puertos</figcaption>
+            </figure>
+        </div>
+
+        <div class="text-lg text-center mb-8">
+            <p class="text-2xl font-bold mb-4">Fibra optica</p>
+            <p class="text-justify mb-4">La fibra óptica utilizada en el despliegue para los siguientes sitios: los siguientes sitios: Torre Eiffel, Louvre, Catedral de Notre-Dame,Basílica del Sagrado Corazón,Arco de Triunfo,Jardines de Luxemburgo y Moulin Rouge. Es de tipo monomodo. La fibra óptica monomodo tiene un núcleo muy pequeño, de solo 9 micrones de diámetro. Esto permite que la luz viaje por la fibra en un solo modo, lo que reduce la atenuación y permite que la señal viaje distancias más largas</p>
+            <figure>
+                <img src="/img/fibra-mono.jpg" alt="Fibra monomodo" class="w-1/2 mx-auto object-cover rounded-lg shadow-md">
+                <figcaption class="text-center mt-4">Fibra monomodo</figcaption>
+            </figure>
+        </div>
+    </main>
+<footer class="bg-gray-800 p-6 mt-4 text-white">
+    <div class="flex justify-between items-center">
+        <p class="text-sm mb-2">© 2024 Hecho en USTA</p>
+        <div class="flex items-center space-x-4">
+            <h2 class="text-lg font-semibold mr-4">Desarrollado por Dylan Tamayo</h2>
+            <a href="#" class="hover:text-blue-500 transition duration-200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="h-8">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

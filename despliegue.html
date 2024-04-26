@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despliegue</title>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+  <style>
+    #mapContainer {
+        height: 60vh;
+        width: 80%;
+        margin: auto;
+    }
+    .leaflet-routing-container-hide {
+        display: none !important;
+    }
+  </style>
+</head>
+<body class="dark bg-gray-900 text-white">
+  <header class="bg-gray-800 p-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-white">Despliegue</h1>
+    <nav class="mx-auto">
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Inicio</a></li>
+            <li><a href="fibra.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Fibra</a></li>
+            <li><a href="despliegue.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Despliegue</a></li>
+            <li><a href="equipos.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Equipos</a></li>
+            <li><a href="presupuesto.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-blue-500 transition duration-200 transform hover:scale-110">Presupuesto</a></li>
+        </ul>
+    </nav>
+    <img src="/img/francia.png" alt="Logo" class="ml-2 w-6 h-6">
+  </header>
+  <main class="p-4 bg-gray-800 rounded-lg shadow-lg lg:h-1/2 overflow-auto mt-4 mx-auto w-full lg:w-4/5">
+    <div class="text-lg text-center mb-8">
+      <p>MAPA DE DESPLIEGUE</p>
+      <p>Una vez instalada la fibra óptica, se conectarán las sedes universitarias al punto de acceso central...</p>
+    </div>
+
+    <div class="swiffy-slider">
+        <ul class="slider-container">
+            <li>
+                <img src="/img/torres-paris.webp" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Torre Eiffel (Distrito 7 - Palais-Bourbon)</figcaption>
+            </li>
+            <li>
+                <img src="/img/Louvre.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Louvre (Distrito 1 - Louvre)</figcaption>
+            </li>
+            <li>
+                <img src="/img/catedral.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Catedral de Notre-Dame (Distrito 4 - Hôtel-de-Ville)</figcaption>
+            </li>
+            <li>
+                <img src="/img/basilica.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Basílica del Sagrado Corazón (Distrito 18 - Butte-Montmartre)</figcaption>
+            </li>
+            <li>
+                <img src="/img/arco.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center"> Arco de Triunfo (Distrito 8 - Élysée)</figcaption>
+            </li>
+            <li>
+                <img src="/img/jardines.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Jardines de Luxemburgo (Distrito 6 - Luxembourg)</figcaption>
+            </li>
+            <li>
+                <img src="/img/moule.jpg" class="w-1/2 mx-auto">
+                <figcaption class="text-center">Moulin Rouge (Distrito 18 - Pigalle)</figcaption>
+            </li>
+        </ul>
+
+        <button type="button" class="slider-nav"></button>
+        <button type="button" class="slider-nav slider-nav-next"></button>
+    
+        <div class="slider-indicators">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+    
+    <div class="text-lg text-center mb-8">
+      <p>Gráficamente se puede observar en el siguiente mapa el despliegue, la cobertura que tendrá el servicio, los componentes utilizados y la posible ruta que tomará la fibra óptica a las diferentes sedes.</p>
+    </div>
+    <div id="mapContainer" class="w-full h-full rounded-lg shadow-lg overflow-hidden"></div>
+  </main>
+<footer class="bg-gray-800 p-6 mt-4 text-white">
+  <div class="flex justify-between items-center">
+    <p class="text-sm mb-2">© 2024 MAPA DE DESPLIEGUE🚀🚀🚀</p>
+    <div class="flex items-center space-x-4">
+      <h2 class="text-lg font-semibold mr-4">Desarrollado por Dylan Tamayo</h2>
+      <a href="#" class="hover:text-blue-500 transition duration-200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="h-8">
+      </a>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
